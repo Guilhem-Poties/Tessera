@@ -4,19 +4,19 @@
 cmake_minimum_required(VERSION 3.5)
 
 file(MAKE_DIRECTORY
-  "C:/Users/Guilhem Poties/Documents/Etudes/FUN/Tessera/App/build/_deps/imgui-src"
-  "C:/Users/Guilhem Poties/Documents/Etudes/FUN/Tessera/App/build/_deps/imgui-build"
-  "C:/Users/Guilhem Poties/Documents/Etudes/FUN/Tessera/App/build/_deps/imgui-subbuild/imgui-populate-prefix"
-  "C:/Users/Guilhem Poties/Documents/Etudes/FUN/Tessera/App/build/_deps/imgui-subbuild/imgui-populate-prefix/tmp"
-  "C:/Users/Guilhem Poties/Documents/Etudes/FUN/Tessera/App/build/_deps/imgui-subbuild/imgui-populate-prefix/src/imgui-populate-stamp"
-  "C:/Users/Guilhem Poties/Documents/Etudes/FUN/Tessera/App/build/_deps/imgui-subbuild/imgui-populate-prefix/src"
-  "C:/Users/Guilhem Poties/Documents/Etudes/FUN/Tessera/App/build/_deps/imgui-subbuild/imgui-populate-prefix/src/imgui-populate-stamp"
+  "C:/Users/Guilhem Poties/Documents/Etudes/FUN/Tessera/build/_deps/imgui-src"
+  "C:/Users/Guilhem Poties/Documents/Etudes/FUN/Tessera/build/_deps/imgui-build"
+  "C:/Users/Guilhem Poties/Documents/Etudes/FUN/Tessera/build/_deps/imgui-subbuild/imgui-populate-prefix"
+  "C:/Users/Guilhem Poties/Documents/Etudes/FUN/Tessera/build/_deps/imgui-subbuild/imgui-populate-prefix/tmp"
+  "C:/Users/Guilhem Poties/Documents/Etudes/FUN/Tessera/build/_deps/imgui-subbuild/imgui-populate-prefix/src/imgui-populate-stamp"
+  "C:/Users/Guilhem Poties/Documents/Etudes/FUN/Tessera/build/_deps/imgui-subbuild/imgui-populate-prefix/src"
+  "C:/Users/Guilhem Poties/Documents/Etudes/FUN/Tessera/build/_deps/imgui-subbuild/imgui-populate-prefix/src/imgui-populate-stamp"
 )
 
 set(configSubDirs )
 foreach(subDir IN LISTS configSubDirs)
-    file(MAKE_DIRECTORY "C:/Users/Guilhem Poties/Documents/Etudes/FUN/Tessera/App/build/_deps/imgui-subbuild/imgui-populate-prefix/src/imgui-populate-stamp/${subDir}")
+    file(MAKE_DIRECTORY "C:/Users/Guilhem Poties/Documents/Etudes/FUN/Tessera/build/_deps/imgui-subbuild/imgui-populate-prefix/src/imgui-populate-stamp/${subDir}")
 endforeach()
 if(cfgdir)
-  file(MAKE_DIRECTORY "C:/Users/Guilhem Poties/Documents/Etudes/FUN/Tessera/App/build/_deps/imgui-subbuild/imgui-populate-prefix/src/imgui-populate-stamp${cfgdir}") # cfgdir has leading slash
+  file(MAKE_DIRECTORY "C:/Users/Guilhem Poties/Documents/Etudes/FUN/Tessera/build/_deps/imgui-subbuild/imgui-populate-prefix/src/imgui-populate-stamp${cfgdir}") # cfgdir has leading slash
 endif()

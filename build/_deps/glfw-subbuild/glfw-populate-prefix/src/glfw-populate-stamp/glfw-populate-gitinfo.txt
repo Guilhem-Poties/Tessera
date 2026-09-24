@@ -3,9 +3,9 @@
 # No other meaning or use of this file is supported.
 
 method=git
-command=C:/Program Files/mingw64/bin/cmake.exe;-P;C:/Users/Guilhem Poties/Documents/Etudes/FUN/Tessera/App/build/_deps/glfw-subbuild/glfw-populate-prefix/tmp/glfw-populate-gitclone.cmake
-source_dir=C:/Users/Guilhem Poties/Documents/Etudes/FUN/Tessera/App/build/_deps/glfw-src
-work_dir=C:/Users/Guilhem Poties/Documents/Etudes/FUN/Tessera/App/build/_deps
+command=C:/Program Files/mingw64/bin/cmake.exe;-P;C:/Users/Guilhem Poties/Documents/Etudes/FUN/Tessera/build/_deps/glfw-subbuild/glfw-populate-prefix/tmp/glfw-populate-gitclone.cmake
+source_dir=C:/Users/Guilhem Poties/Documents/Etudes/FUN/Tessera/build/_deps/glfw-src
+work_dir=C:/Users/Guilhem Poties/Documents/Etudes/FUN/Tessera/build/_deps
 repository=https://github.com/glfw/glfw.git
 remote=origin
 init_submodules=TRUE

@@ -28,8 +28,8 @@ set_property(GLOBAL PROPERTY _CMAKE_FindGit_GIT_EXECUTABLE_VERSION
 include(ExternalProject)
 ExternalProject_Add(imgui-populate
                      "UPDATE_DISCONNECTED" "False" "GIT_REPOSITORY" "https://github.com/ocornut/imgui.git" "EXTERNALPROJECT_INTERNAL_ARGUMENT_SEPARATOR" "GIT_TAG" "docking"
-                    SOURCE_DIR          "C:/Users/Guilhem Poties/Documents/Etudes/FUN/Tessera/App/build/_deps/imgui-src"
-                    BINARY_DIR          "C:/Users/Guilhem Poties/Documents/Etudes/FUN/Tessera/App/build/_deps/imgui-build"
+                    SOURCE_DIR          "C:/Users/Guilhem Poties/Documents/Etudes/FUN/Tessera/build/_deps/imgui-src"
+                    BINARY_DIR          "C:/Users/Guilhem Poties/Documents/Etudes/FUN/Tessera/build/_deps/imgui-build"
                     CONFIGURE_COMMAND   ""
                     BUILD_COMMAND       ""
                     INSTALL_COMMAND     ""

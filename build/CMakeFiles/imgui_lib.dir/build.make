@@ -52,10 +52,10 @@ RM = "C:\Program Files\mingw64\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\Guilhem Poties\Documents\Etudes\FUN\Tessera\App"
+CMAKE_SOURCE_DIR = "C:\Users\Guilhem Poties\Documents\Etudes\FUN\Tessera"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\Guilhem Poties\Documents\Etudes\FUN\Tessera\App\build"
+CMAKE_BINARY_DIR = "C:\Users\Guilhem Poties\Documents\Etudes\FUN\Tessera\build"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/imgui_lib.dir/depend.make
@@ -72,106 +72,106 @@ CMakeFiles/imgui_lib.dir/_deps/imgui-src/imgui.cpp.obj: CMakeFiles/imgui_lib.dir
 CMakeFiles/imgui_lib.dir/_deps/imgui-src/imgui.cpp.obj: CMakeFiles/imgui_lib.dir/includes_CXX.rsp
 CMakeFiles/imgui_lib.dir/_deps/imgui-src/imgui.cpp.obj: _deps/imgui-src/imgui.cpp
 CMakeFiles/imgui_lib.dir/_deps/imgui-src/imgui.cpp.obj: CMakeFiles/imgui_lib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Guilhem Poties\Documents\Etudes\FUN\Tessera\App\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/imgui_lib.dir/_deps/imgui-src/imgui.cpp.obj"
-	C:\PROGRA~1\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/imgui_lib.dir/_deps/imgui-src/imgui.cpp.obj -MF CMakeFiles\imgui_lib.dir\_deps\imgui-src\imgui.cpp.obj.d -o CMakeFiles\imgui_lib.dir\_deps\imgui-src\imgui.cpp.obj -c "C:\Users\Guilhem Poties\Documents\Etudes\FUN\Tessera\App\build\_deps\imgui-src\imgui.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Guilhem Poties\Documents\Etudes\FUN\Tessera\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/imgui_lib.dir/_deps/imgui-src/imgui.cpp.obj"
+	C:\PROGRA~1\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/imgui_lib.dir/_deps/imgui-src/imgui.cpp.obj -MF CMakeFiles\imgui_lib.dir\_deps\imgui-src\imgui.cpp.obj.d -o CMakeFiles\imgui_lib.dir\_deps\imgui-src\imgui.cpp.obj -c "C:\Users\Guilhem Poties\Documents\Etudes\FUN\Tessera\build\_deps\imgui-src\imgui.cpp"
 
 CMakeFiles/imgui_lib.dir/_deps/imgui-src/imgui.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/imgui_lib.dir/_deps/imgui-src/imgui.cpp.i"
-	C:\PROGRA~1\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Guilhem Poties\Documents\Etudes\FUN\Tessera\App\build\_deps\imgui-src\imgui.cpp" > CMakeFiles\imgui_lib.dir\_deps\imgui-src\imgui.cpp.i
+	C:\PROGRA~1\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Guilhem Poties\Documents\Etudes\FUN\Tessera\build\_deps\imgui-src\imgui.cpp" > CMakeFiles\imgui_lib.dir\_deps\imgui-src\imgui.cpp.i
 
 CMakeFiles/imgui_lib.dir/_deps/imgui-src/imgui.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/imgui_lib.dir/_deps/imgui-src/imgui.cpp.s"
-	C:\PROGRA~1\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Guilhem Poties\Documents\Etudes\FUN\Tessera\App\build\_deps\imgui-src\imgui.cpp" -o CMakeFiles\imgui_lib.dir\_deps\imgui-src\imgui.cpp.s
+	C:\PROGRA~1\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Guilhem Poties\Documents\Etudes\FUN\Tessera\build\_deps\imgui-src\imgui.cpp" -o CMakeFiles\imgui_lib.dir\_deps\imgui-src\imgui.cpp.s
 
 CMakeFiles/imgui_lib.dir/_deps/imgui-src/imgui_draw.cpp.obj: CMakeFiles/imgui_lib.dir/flags.make
 CMakeFiles/imgui_lib.dir/_deps/imgui-src/imgui_draw.cpp.obj: CMakeFiles/imgui_lib.dir/includes_CXX.rsp
 CMakeFiles/imgui_lib.dir/_deps/imgui-src/imgui_draw.cpp.obj: _deps/imgui-src/imgui_draw.cpp
 CMakeFiles/imgui_lib.dir/_deps/imgui-src/imgui_draw.cpp.obj: CMakeFiles/imgui_lib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Guilhem Poties\Documents\Etudes\FUN\Tessera\App\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/imgui_lib.dir/_deps/imgui-src/imgui_draw.cpp.obj"
-	C:\PROGRA~1\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/imgui_lib.dir/_deps/imgui-src/imgui_draw.cpp.obj -MF CMakeFiles\imgui_lib.dir\_deps\imgui-src\imgui_draw.cpp.obj.d -o CMakeFiles\imgui_lib.dir\_deps\imgui-src\imgui_draw.cpp.obj -c "C:\Users\Guilhem Poties\Documents\Etudes\FUN\Tessera\App\build\_deps\imgui-src\imgui_draw.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Guilhem Poties\Documents\Etudes\FUN\Tessera\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/imgui_lib.dir/_deps/imgui-src/imgui_draw.cpp.obj"
+	C:\PROGRA~1\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/imgui_lib.dir/_deps/imgui-src/imgui_draw.cpp.obj -MF CMakeFiles\imgui_lib.dir\_deps\imgui-src\imgui_draw.cpp.obj.d -o CMakeFiles\imgui_lib.dir\_deps\imgui-src\imgui_draw.cpp.obj -c "C:\Users\Guilhem Poties\Documents\Etudes\FUN\Tessera\build\_deps\imgui-src\imgui_draw.cpp"
 
 CMakeFiles/imgui_lib.dir/_deps/imgui-src/imgui_draw.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/imgui_lib.dir/_deps/imgui-src/imgui_draw.cpp.i"
-	C:\PROGRA~1\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Guilhem Poties\Documents\Etudes\FUN\Tessera\App\build\_deps\imgui-src\imgui_draw.cpp" > CMakeFiles\imgui_lib.dir\_deps\imgui-src\imgui_draw.cpp.i
+	C:\PROGRA~1\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Guilhem Poties\Documents\Etudes\FUN\Tessera\build\_deps\imgui-src\imgui_draw.cpp" > CMakeFiles\imgui_lib.dir\_deps\imgui-src\imgui_draw.cpp.i
 
 CMakeFiles/imgui_lib.dir/_deps/imgui-src/imgui_draw.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/imgui_lib.dir/_deps/imgui-src/imgui_draw.cpp.s"
-	C:\PROGRA~1\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Guilhem Poties\Documents\Etudes\FUN\Tessera\App\build\_deps\imgui-src\imgui_draw.cpp" -o CMakeFiles\imgui_lib.dir\_deps\imgui-src\imgui_draw.cpp.s
+	C:\PROGRA~1\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Guilhem Poties\Documents\Etudes\FUN\Tessera\build\_deps\imgui-src\imgui_draw.cpp" -o CMakeFiles\imgui_lib.dir\_deps\imgui-src\imgui_draw.cpp.s
 
 CMakeFiles/imgui_lib.dir/_deps/imgui-src/imgui_tables.cpp.obj: CMakeFiles/imgui_lib.dir/flags.make
 CMakeFiles/imgui_lib.dir/_deps/imgui-src/imgui_tables.cpp.obj: CMakeFiles/imgui_lib.dir/includes_CXX.rsp
 CMakeFiles/imgui_lib.dir/_deps/imgui-src/imgui_tables.cpp.obj: _deps/imgui-src/imgui_tables.cpp
 CMakeFiles/imgui_lib.dir/_deps/imgui-src/imgui_tables.cpp.obj: CMakeFiles/imgui_lib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Guilhem Poties\Documents\Etudes\FUN\Tessera\App\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/imgui_lib.dir/_deps/imgui-src/imgui_tables.cpp.obj"
-	C:\PROGRA~1\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/imgui_lib.dir/_deps/imgui-src/imgui_tables.cpp.obj -MF CMakeFiles\imgui_lib.dir\_deps\imgui-src\imgui_tables.cpp.obj.d -o CMakeFiles\imgui_lib.dir\_deps\imgui-src\imgui_tables.cpp.obj -c "C:\Users\Guilhem Poties\Documents\Etudes\FUN\Tessera\App\build\_deps\imgui-src\imgui_tables.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Guilhem Poties\Documents\Etudes\FUN\Tessera\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/imgui_lib.dir/_deps/imgui-src/imgui_tables.cpp.obj"
+	C:\PROGRA~1\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/imgui_lib.dir/_deps/imgui-src/imgui_tables.cpp.obj -MF CMakeFiles\imgui_lib.dir\_deps\imgui-src\imgui_tables.cpp.obj.d -o CMakeFiles\imgui_lib.dir\_deps\imgui-src\imgui_tables.cpp.obj -c "C:\Users\Guilhem Poties\Documents\Etudes\FUN\Tessera\build\_deps\imgui-src\imgui_tables.cpp"
 
 CMakeFiles/imgui_lib.dir/_deps/imgui-src/imgui_tables.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/imgui_lib.dir/_deps/imgui-src/imgui_tables.cpp.i"
-	C:\PROGRA~1\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Guilhem Poties\Documents\Etudes\FUN\Tessera\App\build\_deps\imgui-src\imgui_tables.cpp" > CMakeFiles\imgui_lib.dir\_deps\imgui-src\imgui_tables.cpp.i
+	C:\PROGRA~1\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Guilhem Poties\Documents\Etudes\FUN\Tessera\build\_deps\imgui-src\imgui_tables.cpp" > CMakeFiles\imgui_lib.dir\_deps\imgui-src\imgui_tables.cpp.i
 
 CMakeFiles/imgui_lib.dir/_deps/imgui-src/imgui_tables.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/imgui_lib.dir/_deps/imgui-src/imgui_tables.cpp.s"
-	C:\PROGRA~1\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Guilhem Poties\Documents\Etudes\FUN\Tessera\App\build\_deps\imgui-src\imgui_tables.cpp" -o CMakeFiles\imgui_lib.dir\_deps\imgui-src\imgui_tables.cpp.s
+	C:\PROGRA~1\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Guilhem Poties\Documents\Etudes\FUN\Tessera\build\_deps\imgui-src\imgui_tables.cpp" -o CMakeFiles\imgui_lib.dir\_deps\imgui-src\imgui_tables.cpp.s
 
 CMakeFiles/imgui_lib.dir/_deps/imgui-src/imgui_widgets.cpp.obj: CMakeFiles/imgui_lib.dir/flags.make
 CMakeFiles/imgui_lib.dir/_deps/imgui-src/imgui_widgets.cpp.obj: CMakeFiles/imgui_lib.dir/includes_CXX.rsp
 CMakeFiles/imgui_lib.dir/_deps/imgui-src/imgui_widgets.cpp.obj: _deps/imgui-src/imgui_widgets.cpp
 CMakeFiles/imgui_lib.dir/_deps/imgui-src/imgui_widgets.cpp.obj: CMakeFiles/imgui_lib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Guilhem Poties\Documents\Etudes\FUN\Tessera\App\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/imgui_lib.dir/_deps/imgui-src/imgui_widgets.cpp.obj"
-	C:\PROGRA~1\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/imgui_lib.dir/_deps/imgui-src/imgui_widgets.cpp.obj -MF CMakeFiles\imgui_lib.dir\_deps\imgui-src\imgui_widgets.cpp.obj.d -o CMakeFiles\imgui_lib.dir\_deps\imgui-src\imgui_widgets.cpp.obj -c "C:\Users\Guilhem Poties\Documents\Etudes\FUN\Tessera\App\build\_deps\imgui-src\imgui_widgets.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Guilhem Poties\Documents\Etudes\FUN\Tessera\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/imgui_lib.dir/_deps/imgui-src/imgui_widgets.cpp.obj"
+	C:\PROGRA~1\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/imgui_lib.dir/_deps/imgui-src/imgui_widgets.cpp.obj -MF CMakeFiles\imgui_lib.dir\_deps\imgui-src\imgui_widgets.cpp.obj.d -o CMakeFiles\imgui_lib.dir\_deps\imgui-src\imgui_widgets.cpp.obj -c "C:\Users\Guilhem Poties\Documents\Etudes\FUN\Tessera\build\_deps\imgui-src\imgui_widgets.cpp"
 
 CMakeFiles/imgui_lib.dir/_deps/imgui-src/imgui_widgets.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/imgui_lib.dir/_deps/imgui-src/imgui_widgets.cpp.i"
-	C:\PROGRA~1\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Guilhem Poties\Documents\Etudes\FUN\Tessera\App\build\_deps\imgui-src\imgui_widgets.cpp" > CMakeFiles\imgui_lib.dir\_deps\imgui-src\imgui_widgets.cpp.i
+	C:\PROGRA~1\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Guilhem Poties\Documents\Etudes\FUN\Tessera\build\_deps\imgui-src\imgui_widgets.cpp" > CMakeFiles\imgui_lib.dir\_deps\imgui-src\imgui_widgets.cpp.i
 
 CMakeFiles/imgui_lib.dir/_deps/imgui-src/imgui_widgets.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/imgui_lib.dir/_deps/imgui-src/imgui_widgets.cpp.s"
-	C:\PROGRA~1\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Guilhem Poties\Documents\Etudes\FUN\Tessera\App\build\_deps\imgui-src\imgui_widgets.cpp" -o CMakeFiles\imgui_lib.dir\_deps\imgui-src\imgui_widgets.cpp.s
+	C:\PROGRA~1\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Guilhem Poties\Documents\Etudes\FUN\Tessera\build\_deps\imgui-src\imgui_widgets.cpp" -o CMakeFiles\imgui_lib.dir\_deps\imgui-src\imgui_widgets.cpp.s
 
 CMakeFiles/imgui_lib.dir/_deps/imgui-src/imgui_demo.cpp.obj: CMakeFiles/imgui_lib.dir/flags.make
 CMakeFiles/imgui_lib.dir/_deps/imgui-src/imgui_demo.cpp.obj: CMakeFiles/imgui_lib.dir/includes_CXX.rsp
 CMakeFiles/imgui_lib.dir/_deps/imgui-src/imgui_demo.cpp.obj: _deps/imgui-src/imgui_demo.cpp
 CMakeFiles/imgui_lib.dir/_deps/imgui-src/imgui_demo.cpp.obj: CMakeFiles/imgui_lib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Guilhem Poties\Documents\Etudes\FUN\Tessera\App\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/imgui_lib.dir/_deps/imgui-src/imgui_demo.cpp.obj"
-	C:\PROGRA~1\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/imgui_lib.dir/_deps/imgui-src/imgui_demo.cpp.obj -MF CMakeFiles\imgui_lib.dir\_deps\imgui-src\imgui_demo.cpp.obj.d -o CMakeFiles\imgui_lib.dir\_deps\imgui-src\imgui_demo.cpp.obj -c "C:\Users\Guilhem Poties\Documents\Etudes\FUN\Tessera\App\build\_deps\imgui-src\imgui_demo.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Guilhem Poties\Documents\Etudes\FUN\Tessera\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/imgui_lib.dir/_deps/imgui-src/imgui_demo.cpp.obj"
+	C:\PROGRA~1\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/imgui_lib.dir/_deps/imgui-src/imgui_demo.cpp.obj -MF CMakeFiles\imgui_lib.dir\_deps\imgui-src\imgui_demo.cpp.obj.d -o CMakeFiles\imgui_lib.dir\_deps\imgui-src\imgui_demo.cpp.obj -c "C:\Users\Guilhem Poties\Documents\Etudes\FUN\Tessera\build\_deps\imgui-src\imgui_demo.cpp"
 
 CMakeFiles/imgui_lib.dir/_deps/imgui-src/imgui_demo.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/imgui_lib.dir/_deps/imgui-src/imgui_demo.cpp.i"
-	C:\PROGRA~1\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Guilhem Poties\Documents\Etudes\FUN\Tessera\App\build\_deps\imgui-src\imgui_demo.cpp" > CMakeFiles\imgui_lib.dir\_deps\imgui-src\imgui_demo.cpp.i
+	C:\PROGRA~1\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Guilhem Poties\Documents\Etudes\FUN\Tessera\build\_deps\imgui-src\imgui_demo.cpp" > CMakeFiles\imgui_lib.dir\_deps\imgui-src\imgui_demo.cpp.i
 
 CMakeFiles/imgui_lib.dir/_deps/imgui-src/imgui_demo.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/imgui_lib.dir/_deps/imgui-src/imgui_demo.cpp.s"
-	C:\PROGRA~1\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Guilhem Poties\Documents\Etudes\FUN\Tessera\App\build\_deps\imgui-src\imgui_demo.cpp" -o CMakeFiles\imgui_lib.dir\_deps\imgui-src\imgui_demo.cpp.s
+	C:\PROGRA~1\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Guilhem Poties\Documents\Etudes\FUN\Tessera\build\_deps\imgui-src\imgui_demo.cpp" -o CMakeFiles\imgui_lib.dir\_deps\imgui-src\imgui_demo.cpp.s
 
 CMakeFiles/imgui_lib.dir/_deps/imgui-src/backends/imgui_impl_glfw.cpp.obj: CMakeFiles/imgui_lib.dir/flags.make
 CMakeFiles/imgui_lib.dir/_deps/imgui-src/backends/imgui_impl_glfw.cpp.obj: CMakeFiles/imgui_lib.dir/includes_CXX.rsp
 CMakeFiles/imgui_lib.dir/_deps/imgui-src/backends/imgui_impl_glfw.cpp.obj: _deps/imgui-src/backends/imgui_impl_glfw.cpp
 CMakeFiles/imgui_lib.dir/_deps/imgui-src/backends/imgui_impl_glfw.cpp.obj: CMakeFiles/imgui_lib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Guilhem Poties\Documents\Etudes\FUN\Tessera\App\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/imgui_lib.dir/_deps/imgui-src/backends/imgui_impl_glfw.cpp.obj"
-	C:\PROGRA~1\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/imgui_lib.dir/_deps/imgui-src/backends/imgui_impl_glfw.cpp.obj -MF CMakeFiles\imgui_lib.dir\_deps\imgui-src\backends\imgui_impl_glfw.cpp.obj.d -o CMakeFiles\imgui_lib.dir\_deps\imgui-src\backends\imgui_impl_glfw.cpp.obj -c "C:\Users\Guilhem Poties\Documents\Etudes\FUN\Tessera\App\build\_deps\imgui-src\backends\imgui_impl_glfw.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Guilhem Poties\Documents\Etudes\FUN\Tessera\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/imgui_lib.dir/_deps/imgui-src/backends/imgui_impl_glfw.cpp.obj"
+	C:\PROGRA~1\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/imgui_lib.dir/_deps/imgui-src/backends/imgui_impl_glfw.cpp.obj -MF CMakeFiles\imgui_lib.dir\_deps\imgui-src\backends\imgui_impl_glfw.cpp.obj.d -o CMakeFiles\imgui_lib.dir\_deps\imgui-src\backends\imgui_impl_glfw.cpp.obj -c "C:\Users\Guilhem Poties\Documents\Etudes\FUN\Tessera\build\_deps\imgui-src\backends\imgui_impl_glfw.cpp"
 
 CMakeFiles/imgui_lib.dir/_deps/imgui-src/backends/imgui_impl_glfw.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/imgui_lib.dir/_deps/imgui-src/backends/imgui_impl_glfw.cpp.i"
-	C:\PROGRA~1\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Guilhem Poties\Documents\Etudes\FUN\Tessera\App\build\_deps\imgui-src\backends\imgui_impl_glfw.cpp" > CMakeFiles\imgui_lib.dir\_deps\imgui-src\backends\imgui_impl_glfw.cpp.i
+	C:\PROGRA~1\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Guilhem Poties\Documents\Etudes\FUN\Tessera\build\_deps\imgui-src\backends\imgui_impl_glfw.cpp" > CMakeFiles\imgui_lib.dir\_deps\imgui-src\backends\imgui_impl_glfw.cpp.i
 
 CMakeFiles/imgui_lib.dir/_deps/imgui-src/backends/imgui_impl_glfw.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/imgui_lib.dir/_deps/imgui-src/backends/imgui_impl_glfw.cpp.s"
-	C:\PROGRA~1\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Guilhem Poties\Documents\Etudes\FUN\Tessera\App\build\_deps\imgui-src\backends\imgui_impl_glfw.cpp" -o CMakeFiles\imgui_lib.dir\_deps\imgui-src\backends\imgui_impl_glfw.cpp.s
+	C:\PROGRA~1\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Guilhem Poties\Documents\Etudes\FUN\Tessera\build\_deps\imgui-src\backends\imgui_impl_glfw.cpp" -o CMakeFiles\imgui_lib.dir\_deps\imgui-src\backends\imgui_impl_glfw.cpp.s
 
 CMakeFiles/imgui_lib.dir/_deps/imgui-src/backends/imgui_impl_opengl3.cpp.obj: CMakeFiles/imgui_lib.dir/flags.make
 CMakeFiles/imgui_lib.dir/_deps/imgui-src/backends/imgui_impl_opengl3.cpp.obj: CMakeFiles/imgui_lib.dir/includes_CXX.rsp
 CMakeFiles/imgui_lib.dir/_deps/imgui-src/backends/imgui_impl_opengl3.cpp.obj: _deps/imgui-src/backends/imgui_impl_opengl3.cpp
 CMakeFiles/imgui_lib.dir/_deps/imgui-src/backends/imgui_impl_opengl3.cpp.obj: CMakeFiles/imgui_lib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Guilhem Poties\Documents\Etudes\FUN\Tessera\App\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/imgui_lib.dir/_deps/imgui-src/backends/imgui_impl_opengl3.cpp.obj"
-	C:\PROGRA~1\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/imgui_lib.dir/_deps/imgui-src/backends/imgui_impl_opengl3.cpp.obj -MF CMakeFiles\imgui_lib.dir\_deps\imgui-src\backends\imgui_impl_opengl3.cpp.obj.d -o CMakeFiles\imgui_lib.dir\_deps\imgui-src\backends\imgui_impl_opengl3.cpp.obj -c "C:\Users\Guilhem Poties\Documents\Etudes\FUN\Tessera\App\build\_deps\imgui-src\backends\imgui_impl_opengl3.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Guilhem Poties\Documents\Etudes\FUN\Tessera\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/imgui_lib.dir/_deps/imgui-src/backends/imgui_impl_opengl3.cpp.obj"
+	C:\PROGRA~1\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/imgui_lib.dir/_deps/imgui-src/backends/imgui_impl_opengl3.cpp.obj -MF CMakeFiles\imgui_lib.dir\_deps\imgui-src\backends\imgui_impl_opengl3.cpp.obj.d -o CMakeFiles\imgui_lib.dir\_deps\imgui-src\backends\imgui_impl_opengl3.cpp.obj -c "C:\Users\Guilhem Poties\Documents\Etudes\FUN\Tessera\build\_deps\imgui-src\backends\imgui_impl_opengl3.cpp"
 
 CMakeFiles/imgui_lib.dir/_deps/imgui-src/backends/imgui_impl_opengl3.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/imgui_lib.dir/_deps/imgui-src/backends/imgui_impl_opengl3.cpp.i"
-	C:\PROGRA~1\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Guilhem Poties\Documents\Etudes\FUN\Tessera\App\build\_deps\imgui-src\backends\imgui_impl_opengl3.cpp" > CMakeFiles\imgui_lib.dir\_deps\imgui-src\backends\imgui_impl_opengl3.cpp.i
+	C:\PROGRA~1\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Guilhem Poties\Documents\Etudes\FUN\Tessera\build\_deps\imgui-src\backends\imgui_impl_opengl3.cpp" > CMakeFiles\imgui_lib.dir\_deps\imgui-src\backends\imgui_impl_opengl3.cpp.i
 
 CMakeFiles/imgui_lib.dir/_deps/imgui-src/backends/imgui_impl_opengl3.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/imgui_lib.dir/_deps/imgui-src/backends/imgui_impl_opengl3.cpp.s"
-	C:\PROGRA~1\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Guilhem Poties\Documents\Etudes\FUN\Tessera\App\build\_deps\imgui-src\backends\imgui_impl_opengl3.cpp" -o CMakeFiles\imgui_lib.dir\_deps\imgui-src\backends\imgui_impl_opengl3.cpp.s
+	C:\PROGRA~1\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Guilhem Poties\Documents\Etudes\FUN\Tessera\build\_deps\imgui-src\backends\imgui_impl_opengl3.cpp" -o CMakeFiles\imgui_lib.dir\_deps\imgui-src\backends\imgui_impl_opengl3.cpp.s
 
 # Object files for target imgui_lib
 imgui_lib_OBJECTS = \
@@ -195,7 +195,7 @@ libimgui_lib.a: CMakeFiles/imgui_lib.dir/_deps/imgui-src/backends/imgui_impl_glf
 libimgui_lib.a: CMakeFiles/imgui_lib.dir/_deps/imgui-src/backends/imgui_impl_opengl3.cpp.obj
 libimgui_lib.a: CMakeFiles/imgui_lib.dir/build.make
 libimgui_lib.a: CMakeFiles/imgui_lib.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="C:\Users\Guilhem Poties\Documents\Etudes\FUN\Tessera\App\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX static library libimgui_lib.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="C:\Users\Guilhem Poties\Documents\Etudes\FUN\Tessera\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX static library libimgui_lib.a"
 	$(CMAKE_COMMAND) -P CMakeFiles\imgui_lib.dir\cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\imgui_lib.dir\link.txt --verbose=$(VERBOSE)
 
@@ -208,6 +208,6 @@ CMakeFiles/imgui_lib.dir/clean:
 .PHONY : CMakeFiles/imgui_lib.dir/clean
 
 CMakeFiles/imgui_lib.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "C:\Users\Guilhem Poties\Documents\Etudes\FUN\Tessera\App" "C:\Users\Guilhem Poties\Documents\Etudes\FUN\Tessera\App" "C:\Users\Guilhem Poties\Documents\Etudes\FUN\Tessera\App\build" "C:\Users\Guilhem Poties\Documents\Etudes\FUN\Tessera\App\build" "C:\Users\Guilhem Poties\Documents\Etudes\FUN\Tessera\App\build\CMakeFiles\imgui_lib.dir\DependInfo.cmake" "--color=$(COLOR)"
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "C:\Users\Guilhem Poties\Documents\Etudes\FUN\Tessera" "C:\Users\Guilhem Poties\Documents\Etudes\FUN\Tessera" "C:\Users\Guilhem Poties\Documents\Etudes\FUN\Tessera\build" "C:\Users\Guilhem Poties\Documents\Etudes\FUN\Tessera\build" "C:\Users\Guilhem Poties\Documents\Etudes\FUN\Tessera\build\CMakeFiles\imgui_lib.dir\DependInfo.cmake" "--color=$(COLOR)"
 .PHONY : CMakeFiles/imgui_lib.dir/depend
 
