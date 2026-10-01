@@ -24,5 +24,7 @@ add_library(imgui_lib
 target_include_directories(imgui_lib PUBLIC ${imgui_SOURCE_DIR} ${imgui_SOURCE_DIR}/backends)
 target_link_libraries(imgui_lib PUBLIC glfw OpenGL::GL)
 
-add_executable(tessera src/main.cpp)
+file(GLOB_RECURSE TESSERA_SOURCES CONFIGURE_DEPENDS "${CMAKE_SOURCE_DIR}/src/*.cpp")
+add_executable(tessera ${TESSERA_SOURCES})
+target_include_directories(tessera PRIVATE src)
 target_link_libraries(tessera PRIVATE imgui_lib glad)

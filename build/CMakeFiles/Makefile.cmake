@@ -51,6 +51,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.27.7/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.27.7/CMakeRCCompiler.cmake"
   "CMakeFiles/3.27.7/CMakeSystem.cmake"
+  "CMakeFiles/VerifyGlobs.cmake"
+  "CMakeFiles/cmake.verify_globs"
   "_deps/glfw-src/CMake/cmake_uninstall.cmake.in"
   "_deps/glfw-src/CMake/glfw3.pc.in"
   "_deps/glfw-src/CMake/glfw3Config.cmake.in"

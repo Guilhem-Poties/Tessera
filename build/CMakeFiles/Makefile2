@@ -172,12 +172,12 @@ CMakeFiles/tessera.dir/all: CMakeFiles/imgui_lib.dir/all
 CMakeFiles/tessera.dir/all: _deps/glfw-build/src/CMakeFiles/glfw.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\tessera.dir\build.make CMakeFiles/tessera.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\tessera.dir\build.make CMakeFiles/tessera.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Users\Guilhem Poties\Documents\Etudes\FUN\Tessera\build\CMakeFiles" --progress-num=33,34 "Built target tessera"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Users\Guilhem Poties\Documents\Etudes\FUN\Tessera\build\CMakeFiles" --progress-num=33,34,35,36,37 "Built target tessera"
 .PHONY : CMakeFiles/tessera.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/tessera.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Guilhem Poties\Documents\Etudes\FUN\Tessera\build\CMakeFiles" 34
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Guilhem Poties\Documents\Etudes\FUN\Tessera\build\CMakeFiles" 37
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/tessera.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Guilhem Poties\Documents\Etudes\FUN\Tessera\build\CMakeFiles" 0
 .PHONY : CMakeFiles/tessera.dir/rule
@@ -250,7 +250,7 @@ _deps/glfw-build/src/CMakeFiles/glfw.dir/clean:
 _deps/glfw-build/src/CMakeFiles/update_mappings.dir/all:
 	$(MAKE) $(MAKESILENT) -f _deps\glfw-build\src\CMakeFiles\update_mappings.dir\build.make _deps/glfw-build/src/CMakeFiles/update_mappings.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps\glfw-build\src\CMakeFiles\update_mappings.dir\build.make _deps/glfw-build/src/CMakeFiles/update_mappings.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Users\Guilhem Poties\Documents\Etudes\FUN\Tessera\build\CMakeFiles" --progress-num=35 "Built target update_mappings"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Users\Guilhem Poties\Documents\Etudes\FUN\Tessera\build\CMakeFiles" --progress-num=38 "Built target update_mappings"
 .PHONY : _deps/glfw-build/src/CMakeFiles/update_mappings.dir/all
 
 # Build rule for subdir invocation for target.
@@ -276,6 +276,7 @@ _deps/glfw-build/src/CMakeFiles/update_mappings.dir/clean:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
+	$(CMAKE_COMMAND) -P "C:\Users\Guilhem Poties\Documents\Etudes\FUN\Tessera\build\CMakeFiles\VerifyGlobs.cmake"
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

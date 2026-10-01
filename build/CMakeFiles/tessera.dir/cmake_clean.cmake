@@ -1,4 +1,10 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/tessera.dir/src/Graph/Links/Links.cpp.obj"
+  "CMakeFiles/tessera.dir/src/Graph/Links/Links.cpp.obj.d"
+  "CMakeFiles/tessera.dir/src/Graph/Nodes/Nodes.cpp.obj"
+  "CMakeFiles/tessera.dir/src/Graph/Nodes/Nodes.cpp.obj.d"
+  "CMakeFiles/tessera.dir/src/T_Variables/T_Variables.cpp.obj"
+  "CMakeFiles/tessera.dir/src/T_Variables/T_Variables.cpp.obj.d"
   "CMakeFiles/tessera.dir/src/main.cpp.obj"
   "CMakeFiles/tessera.dir/src/main.cpp.obj.d"
   "libtessera.dll.a"
