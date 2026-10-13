@@ -1,0 +1,117 @@
+name: CI
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: ${{ matrix.os }} / ${{ matrix.std }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+        std: [cxx_std_17, cxx_std_20, cxx_std_23]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Configure
+        run: >
+          cmake -S . -B build
+          -DCMAKE_BUILD_TYPE=Release
+          -DUUID_BUILD_TESTS=ON
+          -DCXX_STD_VER=${{ matrix.std }}
+
+      - name: Build
+        run: cmake --build build --config Release --parallel
+
+      - name: Test
+        run: ctest --test-dir build -C Release --output-on-failure
+
+  # AppVeyor used to build both Win32 and x64; the job above covers x64 only
+  build-win32:
+    name: windows-latest / Win32 / ${{ matrix.std }}
+    runs-on: windows-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        std: [cxx_std_17, cxx_std_20, cxx_std_23]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Configure
+        run: >
+          cmake -S . -B build -A Win32
+          -DUUID_BUILD_TESTS=ON
+          -DCXX_STD_VER=${{ matrix.std }}
+
+      - name: Build
+        run: cmake --build build --config Release --parallel
+
+      - name: Test
+        run: ctest --test-dir build -C Release --output-on-failure
+
+  # The operating system generator is platform specific code that the default
+  # configuration compiles out, so it gets a configuration of its own.
+  # UUID_TIME_GENERATOR is deliberately left out: its test is broken, see below.
+  system-generator:
+    name: system generator / ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install libuuid
+        if: runner.os == 'Linux'
+        run: sudo apt-get update && sudo apt-get install -y uuid-dev
+
+      - name: Configure
+        run: >
+          cmake -S . -B build
+          -DCMAKE_BUILD_TYPE=Release
+          -DUUID_BUILD_TESTS=ON
+          -DUUID_SYSTEM_GENERATOR=ON
+          -DCXX_STD_VER=cxx_std_20
+
+      - name: Build
+        run: cmake --build build --config Release --parallel
+
+      - name: Test
+        run: ctest --test-dir build -C Release --output-on-failure
+
+  # Advisory only, on purpose: this job is not part of the CI gate below.
+  cppcheck:
+    name: cppcheck
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install cppcheck
+        run: sudo apt-get update && sudo apt-get install -y cppcheck
+
+      # catch/ and gsl/ are vendored third party code, so only our own sources
+      # are checked
+      - name: Run cppcheck
+        run: cppcheck --quiet --error-exitcode=1 --inline-suppr -I include include test
+
+  ci:
+    name: CI
+    if: always()
+    needs: [build, build-win32, system-generator]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check build results
+        if: contains(needs.*.result, 'failure') || contains(needs.*.result, 'cancelled')
+        run: exit 1
