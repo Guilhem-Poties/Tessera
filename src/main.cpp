@@ -1,130 +1,134 @@
+// Tessera — node-based VJing interface.
+//
+//   tessera [--open <project dir or project.tessera>] [--time <seconds>] [--play]
+//           [--screenshot <file.png> [--frames <n>]] [--size <w>x<h>]
+
+#include "ui/App.h"
+
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 #include <imgui.h>
 #include <imgui_impl_glfw.h>
 #include <imgui_impl_opengl3.h>
+#include <stb_image_write.h>
+
 #include <cstdio>
+#include <cstdlib>
+#include <string>
+#include <vector>
 
-// Fullscreen triangle, no vertex buffer needed
-static const char* kVert = R"(#version 330 core
-out vec2 uv;
-void main() {
-    vec2 p = vec2((gl_VertexID << 1) & 2, gl_VertexID & 2);
-    uv = p;
-    gl_Position = vec4(p * 2.0 - 1.0, 0.0, 1.0);
-})";
+namespace {
 
-// Your shader goes here (Shadertoy/ISF-like uniforms)
-static const char* kFrag = R"(#version 330 core
-in vec2 uv;
-out vec4 fragColor;
-uniform float iTime;
-uniform vec2  iResolution;
-void main() {
-    vec3 col = 0.5 + 0.5 * cos(iTime + uv.xyx + vec3(0, 2, 4));
-    fragColor = vec4(col, 1.0);
-})";
-
-static GLuint compile(GLenum type, const char* src) {
-    GLuint s = glCreateShader(type);
-    glShaderSource(s, 1, &src, nullptr);
-    glCompileShader(s);
-    GLint ok; glGetShaderiv(s, GL_COMPILE_STATUS, &ok);
-    if (!ok) { char log[1024]; glGetShaderInfoLog(s, 1024, nullptr, log); fprintf(stderr, "%s\n", log); }
-    return s;
-}
-
-static GLuint makeProgram(const char* vs, const char* fs) {
-    GLuint p = glCreateProgram();
-    GLuint v = compile(GL_VERTEX_SHADER, vs), f = compile(GL_FRAGMENT_SHADER, fs);
-    glAttachShader(p, v); glAttachShader(p, f); glLinkProgram(p);
-    glDeleteShader(v); glDeleteShader(f);
-    return p;
-}
-
-struct RenderTarget {
-    GLuint fbo = 0, tex = 0;
-    int w = 0, h = 0;
-    void resize(int nw, int nh) {
-        if (nw == w && nh == h) return;
-        w = nw; h = nh;
-        if (!fbo) { glGenFramebuffers(1, &fbo); glGenTextures(1, &tex); }
-        glBindTexture(GL_TEXTURE_2D, tex);
-        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA8, w, h, 0, GL_RGBA, GL_UNSIGNED_BYTE, nullptr);
-        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-        glBindFramebuffer(GL_FRAMEBUFFER, fbo);
-        glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, tex, 0);
-        glBindFramebuffer(GL_FRAMEBUFFER, 0);
-    }
+struct Options {
+    std::string open;
+    std::string screenshot;
+    int frames = 30;
+    int width = 1600, height = 900;
+    float time = -1;
+    bool play = false;
 };
 
-int main() {
-    glfwInit();
+Options parse(int argc, char** argv) {
+    Options o;
+    for (int i = 1; i < argc; ++i) {
+        std::string a = argv[i];
+        auto next = [&]() -> std::string { return i + 1 < argc ? argv[++i] : ""; };
+        if (a == "--open") o.open = next();
+        else if (a == "--screenshot") o.screenshot = next();
+        else if (a == "--frames") o.frames = std::atoi(next().c_str());
+        else if (a == "--time") o.time = (float)std::atof(next().c_str());
+        else if (a == "--play") o.play = true;
+        else if (a == "--size") std::sscanf(next().c_str(), "%dx%d", &o.width, &o.height);
+    }
+    return o;
+}
+
+void saveScreenshot(GLFWwindow* win, const std::string& path) {
+    int w, h;
+    glfwGetFramebufferSize(win, &w, &h);
+    std::vector<unsigned char> px((size_t)w * h * 4);
+    glPixelStorei(GL_PACK_ALIGNMENT, 1);
+    glReadBuffer(GL_BACK);
+    glReadPixels(0, 0, w, h, GL_RGBA, GL_UNSIGNED_BYTE, px.data());
+    stbi_flip_vertically_on_write(1);
+    if (stbi_write_png(path.c_str(), w, h, 4, px.data(), w * 4)) std::printf("Saved %s (%dx%d)\n", path.c_str(), w, h);
+    else std::fprintf(stderr, "Can't write %s\n", path.c_str());
+}
+
+} // namespace
+
+int main(int argc, char** argv) {
+    Options opt = parse(argc, argv);
+
+    glfwSetErrorCallback([](int code, const char* msg) { std::fprintf(stderr, "GLFW %d: %s\n", code, msg); });
+    if (!glfwInit()) return 1;
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 #ifdef __APPLE__
     glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
 #endif
-    GLFWwindow* win = glfwCreateWindow(1600, 900, "Tessera", nullptr, nullptr);
+    GLFWwindow* win = glfwCreateWindow(opt.width, opt.height, "Tessera", nullptr, nullptr);
+    if (!win) {
+        glfwTerminate();
+        return 1;
+    }
     glfwMakeContextCurrent(win);
     glfwSwapInterval(1);
-    gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
+    if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)) {
+        std::fprintf(stderr, "Failed to load OpenGL\n");
+        return 1;
+    }
 
     IMGUI_CHECKVERSION();
     ImGui::CreateContext();
-    ImGui::GetIO().ConfigFlags |= ImGuiConfigFlags_DockingEnable;
-    ImGui::StyleColorsDark();
+    ImGuiIO& io = ImGui::GetIO();
+    io.ConfigFlags |= ImGuiConfigFlags_DockingEnable;
+    if (!opt.screenshot.empty()) io.IniFilename = nullptr;   // reproducible layout
     ImGui_ImplGlfw_InitForOpenGL(win, true);
     ImGui_ImplOpenGL3_Init("#version 330");
 
-    GLuint prog = makeProgram(kVert, kFrag);
-    GLuint vao; glGenVertexArrays(1, &vao);   // core profile requires a bound VAO
-    RenderTarget rt;
+    tessera::App app;
+    app.init(win);
+    if (!opt.open.empty()) app.openProject(opt.open);
+    if (opt.time >= 0) app.ed.playhead = opt.time;
+    if (opt.play) app.playback.play(app.ed);
 
-    while (!glfwWindowShouldClose(win)) {
+    int frame = 0;
+    double last = glfwGetTime();
+    while (!glfwWindowShouldClose(win) && !app.quitRequested) {
         glfwPollEvents();
+        double now = glfwGetTime();
+        float dt = (float)(now - last);
+        last = now;
+        if (!opt.screenshot.empty()) dt = 1.0f / 60.0f;   // deterministic captures
+
         ImGui_ImplOpenGL3_NewFrame();
         ImGui_ImplGlfw_NewFrame();
         ImGui::NewFrame();
-        ImGui::DockSpaceOverViewport();
-
-        ImGui::Begin("Preview");
-        ImVec2 size = ImGui::GetContentRegionAvail();
-        if (size.x > 0 && size.y > 0) {
-            rt.resize((int)size.x, (int)size.y);
-
-            // Render the shader into the FBO
-            glBindFramebuffer(GL_FRAMEBUFFER, rt.fbo);
-            glViewport(0, 0, rt.w, rt.h);
-            glUseProgram(prog);
-            glUniform1f(glGetUniformLocation(prog, "iTime"), (float)glfwGetTime());
-            glUniform2f(glGetUniformLocation(prog, "iResolution"), (float)rt.w, (float)rt.h);
-            glBindVertexArray(vao);
-            glDrawArrays(GL_TRIANGLES, 0, 3);
-            glBindFramebuffer(GL_FRAMEBUFFER, 0);
-
-            // Show it; UVs flipped because GL textures are bottom-up
-            ImGui::Image((ImTextureID)(intptr_t)rt.tex, size, ImVec2(0, 1), ImVec2(1, 0));
-        }
-        ImGui::End();
-
-        ImGui::Begin("Info");
-        ImGui::Text("%.1f FPS", ImGui::GetIO().Framerate);
-        ImGui::End();
-
+        app.frame(dt);
         ImGui::Render();
-        int fw, fh; glfwGetFramebufferSize(win, &fw, &fh);
+
+        int fw, fh;
+        glfwGetFramebufferSize(win, &fw, &fh);
+        glBindFramebuffer(GL_FRAMEBUFFER, 0);
         glViewport(0, 0, fw, fh);
-        glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
+        glClearColor(0.08f, 0.09f, 0.10f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
         ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
+
+        if (!opt.screenshot.empty() && ++frame >= opt.frames) {
+            saveScreenshot(win, opt.screenshot);
+            break;
+        }
         glfwSwapBuffers(win);
     }
 
+    app.shutdown();
     ImGui_ImplOpenGL3_Shutdown();
     ImGui_ImplGlfw_Shutdown();
     ImGui::DestroyContext();
+    glfwDestroyWindow(win);
     glfwTerminate();
+    return 0;
 }
